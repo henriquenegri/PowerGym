@@ -1,0 +1,32 @@
+.navbar, .offcanvas, .btn-close{
+    background-color: #4e0666 !important;
+    color: white !important;
+}
+
+.navbar-toggler{
+    background-color: white;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.offcanvas .offcanvas-title,
+.offcanvas .nav-link{
+    color: white;
+}
+
+.nav-link{
+    align-items: center !important;
+    text-align: center !important;
+    font-size: large;
+}
+
+.offcanvas-header{
+    background-color: rgb(5, 88, 27);
+}
+.offcanvas-title{
+    color: rgb(255, 255, 255) !important;
+}
+
+.btn-close{
+    background-color: white !important;
+}

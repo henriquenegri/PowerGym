@@ -1,0 +1,10 @@
+footer {
+    width: 100%;
+    position: relative;
+    background-color: #4e0666;
+}
+
+.text-center {
+    width: 100%;
+    margin: 0;
+}

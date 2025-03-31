@@ -1,0 +1,80 @@
+<div class="card">
+    <div class="card-header">Aluno</div>
+    <form #alunoForm="ngForm" (ngSubmit)="onSubmit(alunoForm)">
+        <div class="card-body">
+            <div class="container mt-4">
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <label for="id" class="form-label">Id</label>
+                        <input type="text" id="id" name="id" class="form-control" [(ngModel)]="aluno.id">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome"
+                            [(ngModel)]="aluno.nome" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-control"
+                            placeholder="exemplo@dominio.com" [(ngModel)]="aluno.email" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+                        <input type="date" id="dataNascimento" name="dataNascimento" class="form-control"
+                            [(ngModel)]="aluno.dataNascimento" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="dataPagamento" class="form-label">Data de Pagamento</label>
+                        <input type="date" id="dataPagamento" name="dataPagamento" class="form-control"
+                            [(ngModel)]="aluno.dataPagamento">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="sexo" class="form-label">Sexo</label>
+                        <select id="sexo" name="sexo" class="form-select" [(ngModel)]="aluno.sexo" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" class="form-control"
+                            placeholder="(00) 00000-0000" [(ngModel)]="aluno.telefone">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="altura" class="form-label">Altura (m)</label>
+                        <input type="text" id="altura" name="altura" class="form-control" placeholder="1.75"
+                            [(ngModel)]="aluno.altura">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="pesoInicial" class="form-label">Peso Inicial (kg)</label>
+                        <input type="text" id="pesoInicial" name="pesoInicial" class="form-control" placeholder="70"
+                            [(ngModel)]="aluno.pesoInicial">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="pesoAtual" class="form-label">Peso Atual (kg)</label>
+                        <input type="text" id="pesoAtual" name="pesoAtual" class="form-control" placeholder="68"
+                            [(ngModel)]="aluno.pesoAtual">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer d-flex justify-content-end gap-2">
+            <a class="btn btn-secondary btn-sm" [routerLink]="['/alunos']">Voltar</a>
+            <button type="submit" class="btn btn-primary btn-sm" [disabled]="!alunoForm.valid">Salvar</button>
+        </div>
+    </form>
+</div>

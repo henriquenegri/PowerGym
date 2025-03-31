@@ -1,0 +1,36 @@
+/* Fundo com gradiente e centralização do conteúdo */
+.container-fluid {
+  background: linear-gradient(135deg, #6a1b9a, #d32f2f); /* Gradiente roxo e vermelho */
+  color: white;
+  min-height: 100vh; /* Garantir que ocupe toda a altura da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem; /* Tamanho grande para o título */
+  font-weight: 700;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* Sombra no título para destacar */
+}
+
+p {
+  font-size: 1.25rem; /* Texto mais suave para a descrição */
+  font-weight: 300; /* Peso mais leve para a descrição */
+  max-width: 600px; /* Limitar a largura do parágrafo */
+}
+
+.btn-primary {
+  background-color: rgb(5, 88, 27); /* Cor vibrante do botão */
+  border-color: rgb(5, 95, 27);
+  padding: 12px 30px; /* Padding para tornar o botão maior */
+  font-size: 1.2rem;
+  border-radius: 50px; /* Bordas arredondadas */
+}
+
+.btn-primary:hover {
+  background-color: #17401b;
+  border-color: #184219;
+}

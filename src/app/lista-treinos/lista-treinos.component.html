@@ -1,0 +1,19 @@
+<div class="card text-bg-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header cards">Treinos</div>
+    <div class="card-body">
+        <ul class="list-group">
+            @for (treino of treinos; track $index) {}
+            <li *ngFor="let treino of treinos" class="list-group-item">
+              <h5>{{ treino.nome }}</h5>
+              <p><strong>Data:</strong> {{ treino.data | date }}</p>
+              <p><strong>Peito:</strong> {{ treino.peito }}</p>
+              <p><strong>Ombros:</strong> {{ treino.ombros }}</p>
+              <p><strong>Tríceps:</strong> {{ treino.triceps }}</p>
+              <p><strong>Bíceps:</strong> {{ treino.biceps }}</p>
+              <p><strong>Costas:</strong> {{ treino.costas }}</p>
+              <p><strong>Perna:</strong> {{ treino.perna }}</p>
+              <p><strong>Cardio:</strong> {{ treino.cardio }}</p>
+            </li>
+          </ul>
+    </div>
+  </div>
