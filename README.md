@@ -1,7 +1,7 @@
-Powergym
+# Powergym
 O Powergym é uma aplicação web desenvolvida com Angular para facilitar o gerenciamento de uma academia. O sistema permite realizar o cadastro de alunos, gerenciamento dos treinos, edição das informações e remoção de alunos, proporcionando uma administração prática e intuitiva para academias.
 
-Funcionalidades
+# Funcionalidades
 Cadastro de Alunos: Registre novos alunos com informações como nome, email, data de nascimento, telefone e outras informações pessoais.
 
 Cadastro de Treino: Cadastre treinos diários para os alunos, incluindo exercícios específicos para peito, ombros, tríceps, bíceps, costas, pernas e cardio.
@@ -10,7 +10,7 @@ Edição de Informações: Atualize os dados dos alunos e seus treinos de forma 
 
 Remoção de Alunos: Exclua registros de alunos que não estão mais ativos na academia.
 
-Tecnologias Utilizadas
+# Tecnologias Utilizadas
 Angular 19.1.6: Framework principal para o desenvolvimento da aplicação.
 
 Bootstrap: Utilizado para o layout e componentes responsivos, como o efeito floating label.
@@ -47,7 +47,7 @@ Acesse a aplicação no navegador em: http://localhost:4200/
 
 A aplicação recarregará automaticamente sempre que você modificar algum arquivo fonte.
 
-Code Scaffolding
+# Code Scaffolding
 Utilize o Angular CLI para gerar novos componentes, serviços e outros recursos. Por exemplo, para criar um novo componente:
 
 bash
@@ -86,7 +86,7 @@ Editar
 ng e2e
 Nota: O Angular CLI não inclui por padrão um framework de testes end-to-end. Você pode escolher o que melhor se adequa às suas necessidades.
 
-Contribuição
+# Contribuição
 Contribuições são bem-vindas! Se você deseja colaborar com o projeto, por favor, siga as seguintes etapas:
 
 Faça um fork do repositório.
