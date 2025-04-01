@@ -1,36 +1,41 @@
-/* Fundo com gradiente e centralização do conteúdo */
-.container-fluid {
-  background: linear-gradient(135deg, #4e0666, #05581B); /* Gradiente roxo e vermelho */
+.hero {
+  background: linear-gradient(135deg, #4e0666, #05581B);
   color: white;
-  min-height: 100vh; /* Garantir que ocupe toda a altura da tela */
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  text-align: left;
+  padding: 50px;
 }
 
-h1 {
-  font-size: 4rem; /* Tamanho grande para o título */
-  font-weight: 700;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* Sombra no título para destacar */
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* Removemos o flex-wrap para manter os itens lado a lado */
 }
 
-p {
-  font-size: 1.25rem; /* Texto mais suave para a descrição */
-  font-weight: 300; /* Peso mais leve para a descrição */
-  max-width: 600px; /* Limitar a largura do parágrafo */
+.hero-image img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
 }
 
-.btn-primary {
-  background-color: rgb(5, 88, 27); /* Cor vibrante do botão */
-  border-color: rgb(5, 95, 27);
-  padding: 12px 30px; /* Padding para tornar o botão maior */
-  font-size: 1.2rem;
-  border-radius: 50px; /* Bordas arredondadas */
+.hero-text {
+  margin-left: 20px;
 }
 
-.btn-primary:hover {
-  background-color: #17401b;
-  border-color: #184219;
+/* Responsividade: em telas menores, os itens empilham */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-text {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
