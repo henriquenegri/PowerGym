@@ -1,4 +1,3 @@
-/* Fundo com gradiente e centralização do conteúdo */
-.container-fluid {
-    background: linear-gradient(135deg, #6a1b9a, #d32f2f);
-  }
+.pag {
+    background: linear-gradient(135deg, #4e0666, #05581B);
+}

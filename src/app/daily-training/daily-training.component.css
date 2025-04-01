@@ -1,0 +1,9 @@
+.card{
+    background-color: transparent;
+    color: black;
+    border-color: white;
+}
+.card-header{
+    color: white;
+    font-size: larger;
+}

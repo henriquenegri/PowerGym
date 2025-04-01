@@ -3,11 +3,11 @@ import { NgForm, FormsModule } from '@angular/forms';
 import { Treino } from '../classes/treino';
 import { TreinosService } from '../services/treinos.service';
 import { AuthServiceService } from '../services/auth-service.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-daily-training',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './daily-training.component.html',
   styleUrl: './daily-training.component.css'
 })

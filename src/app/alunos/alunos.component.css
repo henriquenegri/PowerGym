@@ -1,0 +1,23 @@
+.custom-table {
+    background-color: transparent;
+    border-color: white;
+    border-collapse: collapse; /* Para unir as bordas */
+  }
+  
+  .custom-table th {
+    background-color: #4e0666; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor do texto do cabeçalho */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .custom-table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .custom-table tr:nth-child(even) {
+    background-color: #e9ecef; /* Cor de fundo para linhas pares */
+  }
+  

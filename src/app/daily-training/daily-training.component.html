@@ -1,93 +1,94 @@
 <div class="card">
-    <div class="card-header">
-      Cadastro Diário de Treino
-    </div>
-    <form #treinoForm="ngForm" (ngSubmit)="onSubmit(treinoForm)">
-      <div class="card-body">
-        <div class="mb-3">
-          <label for="nome" class="form-label">Nome do Treino</label>
-          <input
-            type="text"
-            id="nome"
-            name="nome"
-            class="form-control"
-            [(ngModel)]="treinos.nome"
-            required>
-        </div>
-        
-        <div class="mb-3">
-          <label for="peito" class="form-label">Exercícios de Peito</label>
-          <textarea
-            id="peito"
-            name="peito"
-            class="form-control"
-            [(ngModel)]="treinos.peito"
-            placeholder="Separe os exercícios por vírgula"></textarea>
-        </div>
-  
-        <div class="mb-3">
-          <label for="ombros" class="form-label">Exercícios de Ombros</label>
-          <textarea
-            id="ombros"
-            name="ombros"
-            class="form-control"
-            [(ngModel)]="treinos.ombros"
-            placeholder="Separe os exercícios por vírgula"></textarea>
-        </div>
-  
-        <div class="mb-3">
-          <label for="triceps" class="form-label">Exercícios de Tríceps</label>
-          <textarea
-            id="triceps"
-            name="triceps"
-            class="form-control"
-            [(ngModel)]="treinos.triceps"
-            placeholder="Separe os exercícios por vírgula"></textarea>
-        </div>
-  
-        <div class="mb-3">
-          <label for="biceps" class="form-label">Exercícios de Bíceps</label>
-          <textarea
-            id="biceps"
-            name="biceps"
-            class="form-control"
-            [(ngModel)]="treinos.biceps"
-            placeholder="Separe os exercícios por vírgula"></textarea>
-        </div>
-  
-        <div class="mb-3">
-          <label for="costas" class="form-label">Exercícios de Costas</label>
-          <textarea
-            id="costas"
-            name="costas"
-            class="form-control"
-            [(ngModel)]="treinos.costas"
-            placeholder="Separe os exercícios por vírgula"></textarea>
-        </div>
-  
-        <div class="mb-3">
-          <label for="perna" class="form-label">Exercícios de Perna</label>
-          <textarea
-            id="perna"
-            name="perna"
-            class="form-control"
-            [(ngModel)]="treinos.perna"
-            placeholder="Separe os exercícios por vírgula"></textarea>
-        </div>
-  
-        <div class="mb-3">
-          <label for="cardio" class="form-label">Exercícios Cardio</label>
-          <textarea
-            id="cardio"
-            name="cardio"
-            class="form-control"
-            [(ngModel)]="treinos.cardio"
-            placeholder="Separe os exercícios por vírgula"></textarea>
-        </div>
-      </div>
-      <div class="card-footer d-flex justify-content-end">
-        <button type="submit" class="btn btn-primary" [disabled]="!treinoForm.valid">Salvar</button>
-      </div>
-    </form>
+  <div class="card-header">
+    Cadastro Diário de Treino
   </div>
+  <form #treinoForm="ngForm" (ngSubmit)="onSubmit(treinoForm)">
+    <div class="card-body">
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          class="form-control"
+          placeholder="Nome do Treino"
+          [(ngModel)]="treinos.nome"
+          required>
+        <label for="nome">Nome do Treino</label>
+      </div>
+      
+      <div class="form-floating mb-3">
+        <textarea
+          id="peito"
+          name="peito"
+          class="form-control"
+          placeholder="Exercícios de Peito"
+          [(ngModel)]="treinos.peito"></textarea>
+        <label for="peito">Exercícios de Peito</label>
+      </div>
   
+      <div class="form-floating mb-3">
+        <textarea
+          id="ombros"
+          name="ombros"
+          class="form-control"
+          placeholder="Exercícios de Ombros"
+          [(ngModel)]="treinos.ombros"></textarea>
+        <label for="ombros">Exercícios de Ombros</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <textarea
+          id="triceps"
+          name="triceps"
+          class="form-control"
+          placeholder="Exercícios de Tríceps"
+          [(ngModel)]="treinos.triceps"></textarea>
+        <label for="triceps">Exercícios de Tríceps</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <textarea
+          id="biceps"
+          name="biceps"
+          class="form-control"
+          placeholder="Exercícios de Bíceps"
+          [(ngModel)]="treinos.biceps"></textarea>
+        <label for="biceps">Exercícios de Bíceps</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <textarea
+          id="costas"
+          name="costas"
+          class="form-control"
+          placeholder="Exercícios de Costas"
+          [(ngModel)]="treinos.costas"></textarea>
+        <label for="costas">Exercícios de Costas</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <textarea
+          id="perna"
+          name="perna"
+          class="form-control"
+          placeholder="Exercícios de Perna"
+          [(ngModel)]="treinos.perna"></textarea>
+        <label for="perna">Exercícios de Perna</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <textarea
+          id="cardio"
+          name="cardio"
+          class="form-control"
+          placeholder="Exercícios Cardio"
+          [(ngModel)]="treinos.cardio"></textarea>
+        <label for="cardio">Exercícios Cardio</label>
+      </div>
+    </div>
+    <div class="card-footer d-flex justify-content-end gap-2">
+      <a class="btn btn-secondary btn-sm" [routerLink]="['/inicio/alunos']">Voltar</a>
+      <button type="submit" class="btn btn-primary" [disabled]="!treinoForm.valid">Salvar</button>
+    </div>
+  </form>
+</div>

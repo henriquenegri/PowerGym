@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AlunosComponent } from './alunos/alunos.component';
-import { PagInicialComponent } from './pag-inicial/pag-inicial.component';
-import { FooterComponent } from "./components/footer/footer.component";
+import { FooterComponent } from "./shared/footer/footer.component";
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarComponent, RouterOutlet, FooterComponent, PagInicialComponent],
+  imports: [NavbarComponent, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

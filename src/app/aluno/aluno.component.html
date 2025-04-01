@@ -1,0 +1,91 @@
+<div class="card">
+    <div class="card-header">Aluno</div>
+    <form #alunoForm="ngForm" (ngSubmit)="onSubmit(alunoForm)">
+      <div class="card-body">
+        <div class="container mt-4">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" id="id" name="id" class="form-control" placeholder="Id" [(ngModel)]="aluno.id">
+                <label for="id">Id</label>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome" [(ngModel)]="aluno.nome" required>
+                <label for="nome">Nome</label>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="email" id="email" name="email" class="form-control" placeholder="exemplo@dominio.com" [(ngModel)]="aluno.email" required>
+                <label for="email">Email</label>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="date" id="dataNascimento" name="dataNascimento" class="form-control" placeholder="Data de Nascimento" [(ngModel)]="aluno.dataNascimento" required>
+                <label for="dataNascimento">Data de Nascimento</label>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="date" id="dataPagamento" name="dataPagamento" class="form-control" placeholder="Data de Pagamento" [(ngModel)]="aluno.dataPagamento">
+                <label for="dataPagamento">Data de Pagamento</label>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div class="form-floating">
+                <select id="sexo" name="sexo" class="form-select" [(ngModel)]="aluno.sexo" required>
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Feminino">Feminino</option>
+                  <option value="Outro">Outro</option>
+                </select>
+                <label for="sexo">Sexo</label>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(00) 00000-0000" [(ngModel)]="aluno.telefone">
+                <label for="telefone">Telefone</label>
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <div class="form-floating">
+                <input type="text" id="altura" name="altura" class="form-control" placeholder="Altura (m)" [(ngModel)]="aluno.altura">
+                <label for="altura">Altura (m)</label>
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <div class="form-floating">
+                <input type="text" id="pesoInicial" name="pesoInicial" class="form-control" placeholder="Peso Inicial (kg)" [(ngModel)]="aluno.pesoInicial">
+                <label for="pesoInicial">Peso Inicial (kg)</label>
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <div class="form-floating">
+                <input type="text" id="pesoAtual" name="pesoAtual" class="form-control" placeholder="Peso Atual (kg)" [(ngModel)]="aluno.pesoAtual">
+                <label for="pesoAtual">Peso Atual (kg)</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card-footer d-flex justify-content-end gap-2">
+        <a class="btn btn-secondary btn-sm" [routerLink]="['/inicio/alunos']">Voltar</a>
+        <button type="submit" class="btn btn-primary btn-sm" [disabled]="!alunoForm.valid">Salvar</button>
+      </div>
+    </form>
+  </div>
+  

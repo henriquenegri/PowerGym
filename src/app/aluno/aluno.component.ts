@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterModule, Router, ParamMap, ActivatedRoute } from '@angular/router';
 import { FormsModule, NgForm } from '@angular/forms';
-import { Aluno } from '../../classes/aluno';
-import { AlunoService } from '../../services/aluno.service';
+import { Aluno } from '../classes/aluno';
+import { AlunoService } from '../services/aluno.service';
 
 
 @Component({
