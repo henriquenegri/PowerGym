@@ -4,8 +4,6 @@ O Powergym é uma aplicação web desenvolvida com Angular para facilitar o gere
 # Funcionalidades
 Cadastro de Alunos: Registre novos alunos com informações como nome, email, data de nascimento, telefone e outras informações pessoais.
 
-Cadastro de Treino: Cadastre treinos diários para os alunos, incluindo exercícios específicos para peito, ombros, tríceps, bíceps, costas, pernas e cardio.
-
 Edição de Informações: Atualize os dados dos alunos e seus treinos de forma simples e rápida.
 
 Remoção de Alunos: Exclua registros de alunos que não estão mais ativos na academia.
@@ -18,7 +16,7 @@ Bootstrap: Utilizado para o layout e componentes responsivos, como o efeito floa
 TypeScript: Linguagem principal para o desenvolvimento da aplicação Angular.
 
 Pré-requisitos
-Node.js (versão LTS recomendada)
+Node.js ()
 
 Angular CLI
 
