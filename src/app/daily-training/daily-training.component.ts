@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormsModule } from '@angular/forms';
-import { Treino } from '../classes/treino';
+import { Treino } from '../alunos/classes/treino';
 import { TreinosService } from '../services/treinos.service';
 import { AuthServiceService } from '../services/auth-service.service';
 import { Router, RouterLink } from '@angular/router';

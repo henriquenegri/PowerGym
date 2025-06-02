@@ -1,51 +1,94 @@
-<div class="card  custom-table">
-    <div class="card-header" style="display: flex; justify-content: space-between; color: white;">
-        Alunos
+<div class="card custom-table">
+  <div class="card-header d-flex justify-content-between align-items-center" style="color: white;">
+    <span>Alunos</span>
+    <a type="button" class="btn btn-success btn-sm" [routerLink]="['aluno']">Novo</a>
+  </div>
 
-        <a type="button" class="btn btn-success btn-sm" [routerLink]="['aluno']">Novo</a>
+  <div class="card-body p-0">
+    <!-- INÍCIO: Wrapper responsivo do Bootstrap -->
+    <div class="table-responsive">
+      <table class="table custom-table mb-0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th class="d-none d-sm-table-cell">Idade</th>
+            <th class="d-none d-md-table-cell">Data Nascimento</th>
+            <th class="d-none d-lg-table-cell">Email</th>
+            <th class="d-none d-xl-table-cell">Data Pagamento</th>
+            <th class="d-none d-md-table-cell">Sexo</th>
+            <th class="d-none d-lg-table-cell">Telefone</th>
+            <th class="d-none d-xl-table-cell">Altura</th>
+            <th class="d-none d-xl-table-cell">Peso Inicial</th>
+            <th class="d-none d-xl-table-cell">Peso Atual</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (aluno of alunos; track $index) {
+            <tr>
+              <td>{{ aluno.id }}</td>
+              <td>{{ aluno.nome }}</td>
+              <td class="d-none d-sm-table-cell">{{ aluno.idade }}</td>
+              <td class="d-none d-md-table-cell">{{ aluno.dataNascimento | date: "dd/MM/yyyy" }}</td>
+              <td class="d-none d-lg-table-cell">{{ aluno.email }}</td>
+              <td class="d-none d-xl-table-cell">{{ aluno.dataPagamento | date: "dd/MM/yyyy HH:mm" }}</td>
+              <td class="d-none d-md-table-cell">{{ aluno.sexo }}</td>
+              <td class="d-none d-lg-table-cell">{{ aluno.telefone }}</td>
+              <td class="d-none d-xl-table-cell">{{ aluno.altura }}</td>
+              <td class="d-none d-xl-table-cell">{{ aluno.pesoInicial }}</td>
+              <td class="d-none d-xl-table-cell">{{ aluno.pesoAtual }}</td>
+              <td class="d-flex justify-content-center gap-1">
+                <button 
+                  type="button" 
+                  class="btn btn-primary btn-sm" 
+                  [routerLink]="['aluno', aluno.id]"
+                  style="margin-right: 5px;">
+                  Editar
+                </button>
+                <button 
+                  type="button" 
+                  class="btn btn-danger btn-sm"
+                  data-bs-toggle="modal" 
+                  data-bs-target="#modalDelete" 
+                  (click)="setIdAluno(aluno.id)">
+                  Excluir
+                </button>
+              </td>
+            </tr>
+          }
+          @empty {
+            <tr>
+              <td colspan="12" class="text-center p-3">Não há alunos cadastrados.</td>
+            </tr>
+          }
+        </tbody>
+      </table>
     </div>
-    <div class="card-body">
-        <table class="table table-responsive">
-            <thead>
-              <tr style="align-items: center; text-align: center; justify-content: center;">
-                <th scope="col">ID</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Data de Nascimento</th>
-                <th scope="col">Email</th>
-                <th scope="col">Data de Pagamento</th>
-                <th scope="col">Sexo</th>
-                <th scope="col">Telefone</th>
-                <th scope="col">Altura</th>
-                <th scope="col">Peso Inicial</th>
-                <th scope="col">Peso Atual</th>
-                <th>Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              @for (aluno of alunosMock; track $index) {
-                <tr>
-                  <td>{{aluno.id}}</td>
-                  <td>{{aluno.nome}}</td>
-                  <td>{{aluno.dataNascimento | date: "dd/MM/yyyy"}}</td>
-                  <td>{{aluno.email}}</td>
-                  <td>{{aluno.dataPagamento | date: "dd/MM/yyyy | HH:mm"}}</td>
-                  <td>{{aluno.sexo}}</td>
-                  <td>{{aluno.telefone}}</td>
-                  <td>{{aluno.altura}}</td>
-                  <td>{{aluno.pesoInicial}}</td>
-                  <td>{{aluno.pesoAtual}}</td>
-                  <td style="display: flex;">
-                    <button type="button" class="btn btn-primary btn-sm" style="margin-right: 10px;" [routerLink]="['aluno', aluno.id]">Editar</button>
-                    <button type="button" class="btn btn-success btn-sm" style="margin-right: 10px;" [routerLink]="['treinos', aluno.id]">Novo Treino</button>
-                    <button type="button" class="btn btn-info btn-sm" style="margin-right: 10px;" [routerLink]="['exibirTreino', aluno.id]">Listar Treinos</button>
-                    <button type="button" (click)="deletar(aluno.id!)" class="btn btn-danger btn-sm">Excluir</button>
-                  </td>
-                </tr>
-              }
-              @empty {
-                <li>Não encontrados valores na tabela</li>
-              }
-            </tbody>
-          </table>
+    <!-- FIM: Wrapper responsivo -->
+  </div>
+
+  <!-- Modal de confirmação (fora do loop) -->
+  <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="modalDeleteLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="modalDeleteLabel">Confirmar Exclusão</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Tem certeza que deseja deletar este aluno?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button 
+            type="button" 
+            class="btn btn-danger"
+            (click)="deletar(idAluno)">
+            Deletar
+          </button>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

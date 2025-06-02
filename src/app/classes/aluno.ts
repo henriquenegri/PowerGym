@@ -1,6 +1,7 @@
 export class Aluno {
     id?: number;
     nome?: string;
+    idade?: number;
     dataNascimento?: Date;
     email?: string;
     dataPagamento?: Date;
