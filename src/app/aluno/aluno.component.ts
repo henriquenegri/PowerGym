@@ -21,6 +21,10 @@ export class AlunoComponent {
               private route: ActivatedRoute){}
 
     ngOnInit(): void {
+      this.obterAlunosId();  
+    }
+    
+    obterAlunosId(){
       this.route.paramMap.subscribe((params: ParamMap) => {
         this.id = Number(params.get('id'));
 
@@ -34,7 +38,7 @@ export class AlunoComponent {
         });
       });
     }
-    
+
     onSubmit(form: NgForm){
       this.formSubmitted = true;
       if(form.invalid){
